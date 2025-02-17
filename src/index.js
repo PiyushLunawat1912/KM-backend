@@ -14,8 +14,9 @@ const app = express();
 const PORT = 3000;
 
 // Connect to MongoDB
+
 mongoose
-  .connect('mongodb://localhost:27017/Km-hospital', {
+  .connect(process.env.MONGO_URI  , {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
