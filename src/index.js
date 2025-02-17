@@ -223,6 +223,6 @@ app.all('*', (req, res) => {
 });
 
 // Start the server
-app.listen(PORT, '192.168.29.104', () => {
-  console.log(`Server is running on http:// 192.168.29.104:${PORT}`);
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
 });
