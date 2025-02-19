@@ -11,6 +11,7 @@ import { Router } from 'express'; // Router for handling routes
 dotenv.config();
 
 const app = express();
+const HOST = '0.0.0.0'; // Allows binding to all IPs
 const PORT = 3000;
 
 // Connect to MongoDB
@@ -224,6 +225,6 @@ app.all('*', (req, res) => {
 });
 
 // Start the server
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+app.listen(PORT, HOST, () => {
+  console.log(`Server running on http://${HOST}:${PORT}`);
 });
